@@ -2,10 +2,6 @@ Description:
     Run a server in golang, in order to show our previous work on ascii art.
     Create a webpage, where you can tap your text, choose the font-family and see the result.
 
-Author:
-    Clément VEY
-    Mathis LECHERF
-
 Usage:
     Only works in localhost.You have to run the main2.go in your terminal. "go run main2.go"
     Go on your web browser. In the path field, tap: "http://localhost:8080/"
