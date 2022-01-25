@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <title>Ascii-Art-Web</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            box-sizing: border-box;
+            background-color:  #373737;
+            text-align: center;
+            color: #C4C5C8;
+        }
+
+        .Header{
+            margin: 20px;
+            font-size: 50px;
+        }
+
+        #Selection{
+            height: 40vh;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        #Selection .inner-width{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            text-align: center;
+        }
+
+        .TextZone{
+            padding: 10px;
+            border: 2px solid #C4C5C8 ;
+            margin: 10px;
+            border-radius: 20px;
+        }
+
+        .ChoiceZone{
+            padding: 10px;
+            border: 2px solid #C4C5C8 ;
+            margin: 10px;
+            border-radius: 20px;
+        }
+
+        #Display{
+            height: 40vh;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        /* .inner-Result{
+            display: flex;
+            align-items: left;
+            justify-content: left;
+            height: 100%;
+            text-align: left;
+        } */
+
+        
+
+    </style>
+</head>
+<body>
+    
+    <p class="Header"> <strong>Ascii-Art-Web</strong> </p>
+
+    <!-- We will creat a form, to link the page to the process handler and so
+    processed the user informations -->
+    <form action="/ascii-art" method="GET">
+
+        <section id="Selection">
+            <div class="inner-width">
+                <div class="TextZone">
+                    <label for="textID">Text Zone</label><br>
+                   <!-- <input type="text" id="textID" name="textInfo" value="Tap Some Text Here" class="TaxtLabel" > <br> -->
+                   <textarea  placeholder="Text a convertir en ascii-art" name="textInfo" id="textID" cols="30" rows="8"></textarea>
+               </div>
+   
+               <div class="ChoiceZone">
+                   <!--<label for="choiceID">Make a choice between (min or maj)</label><br>
+                   <input type="text" name="choiceInfo" id="choiceID" value="Make your choice here"><br>-->
+                   <!-- <p>Choice your font-family</p> -->
+                   <label for="choiceID">Choice your font-family</label><br><br>  
+                   <td colspan="3">
+                       
+                           <select name="choiceInfo" id="choiceID">
+                                <option>standard</option>   
+                                <option>shadow</option>
+                                <option>thinkertoy</option>
+                           </select><br>
+                   </td><br>
+   
+                   <input type="submit" value="Submit" class="submit">
+   
+                  
+               </div>
+   
+               
+           </div>
+        </section>
+
+       
+        
+       
+    
+    
+    </form>
+
+    <section id="Display">
+        <div class="inner-Result">
+            <div class="Result">
+                    <pre>{{.Text1}}</pre>
+            </div> 
+        </div>
+    </section>
+
+    
+    
+
+</body>
+</html>
